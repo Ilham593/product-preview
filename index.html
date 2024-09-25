@@ -1,36 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Product preview card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Product preview card component</title>
 
-  Perfume
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
 
-  Gabrielle Essence Eau De Parfum
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* border: 1px solid black; */
+      }
 
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(30, 38%, 92%);
+        font-size: 14px;
+      }
 
-  $149.99
-  $169.99
+      .container {
+        width: 100%;
+        max-width: 350px;
+        /* height: 80vh; */
+        border-radius: 10px;
+        background-color: hsl(0, 0%, 100%);
+       
+      }
 
-  Add to Cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      .container .content {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container .content .ket {
+        color: hsl(228, 12%, 48%);
+        letter-spacing: 1px;
+        line-height: 20px;
+        font-weight: bold;
+      }
+
+      .container img {
+        max-width: 350px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .container p.judul {
+        width: 100%;
+        margin-top: 10px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: hsl(228, 12%, 48%);
+        text-align:left;
+
+      }
+
+      .container .content h1.merk {
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+
+      .container  .harga {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin:20px  0px;
+        color: hsl(158, 36%, 37%);
+      }
+      .container h1 {
+        font-size: 35px;
+      }
+
+      .container  .harga p {
+        text-decoration: line-through;
+      }
+
+      .container button {
+        font-size: 15px;
+        font-weight: bold;
+        width: 90%;
+        height: 50px;
+        background-color: hsl(158, 36%, 37%);
+        border-radius: 10px;
+        color: white;
+        border: none;
+      }
+
+      .container button:hover {
+        background-color: hsl(212, 21%, 14%);
+      }
+
+      @media screen and (min-width: 768px) {
+        .container {
+          display: flex;
+          flex-direction: row;
+          max-width: 700px;
+
+        }
+
+        .container img {
+          width: 50%;
+          content: url(/images/image-product-desktop.jpg);
+          border-top-right-radius: 0;
+          border-bottom-left-radius: 10px;
+        }
+
+        .container .content {
+          width: 50%;
+          padding: 30px;
+        }
+
+        .container .merk {
+          margin-bottom: 50px;
+        }
+
+        .container p.judul {
+          margin: 20px;
+        }
+
+        .container .harga {
+          margin: 25px;
+        }
+
+        .container button {
+          margin-bottom: -30px;
+        }
+      }
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="/images/image-product-mobile.jpg" alt="" />
+      <div class="content">
+        <p class="judul">Perfume</p>
+        <h1 class="merk">Gabrielle Essence Eau De Parfum</h1>
+        <p class="ket">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="harga">
+          <h1>$149.99</h1>
+          <p>$169.99</p>
+        </div>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
 </html>
